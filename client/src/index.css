@@ -43,39 +43,40 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
+  /* Swiss / International Typographic Style */
+  --radius: 0rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
+  --foreground: oklch(0.08 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
+  --card-foreground: oklch(0.08 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --popover-foreground: oklch(0.08 0 0);
+  --primary: oklch(0.08 0 0);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0 0);
+  --secondary-foreground: oklch(0.08 0 0);
+  --muted: oklch(0.96 0 0);
+  --muted-foreground: oklch(0.45 0 0);
+  --accent: oklch(0.55 0.22 27.33);   /* Red accent */
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.55 0.22 27.33);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.88 0 0);
+  --input: oklch(0.88 0 0);
+  --ring: oklch(0.08 0 0);
+  --chart-1: oklch(0.55 0.22 27.33);
+  --chart-2: oklch(0.08 0 0);
+  --chart-3: oklch(0.45 0 0);
+  --chart-4: oklch(0.65 0 0);
+  --chart-5: oklch(0.82 0 0);
+  --sidebar: oklch(0.06 0 0);
+  --sidebar-foreground: oklch(0.95 0 0);
+  --sidebar-primary: oklch(0.55 0.22 27.33);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.14 0 0);
+  --sidebar-accent-foreground: oklch(0.95 0 0);
+  --sidebar-border: oklch(0.18 0 0);
+  --sidebar-ring: oklch(0.55 0.22 27.33);
 }
 
 .dark {
@@ -119,6 +120,14 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", "Noto Sans TC", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -174,4 +183,115 @@
       max-width: 1280px; /* Standard content width */
     }
   }
+}
+/* ─── Swiss Style Utilities ──────────────────────────────────────────────── */
+.swiss-label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: oklch(0.45 0 0);
+}
+
+.swiss-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.swiss-number-lg {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.stat-card {
+  border: 1px solid oklch(0.88 0 0);
+  padding: 1.5rem;
+  background: white;
+  position: relative;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: oklch(0.55 0.22 27.33);
+}
+
+.score-eagle { color: oklch(0.55 0.22 27.33); font-weight: 900; }
+.score-birdie { color: oklch(0.55 0.22 27.33); font-weight: 700; }
+.score-par { color: oklch(0.08 0 0); font-weight: 500; }
+.score-bogey { color: oklch(0.45 0 0); font-weight: 500; }
+.score-double { color: oklch(0.65 0 0); font-weight: 500; }
+
+.score-eagle-bg { background-color: oklch(0.55 0.22 27.33); color: white; }
+.score-birdie-bg { background-color: oklch(0.55 0.22 27.33 / 0.15); color: oklch(0.55 0.22 27.33); }
+.score-par-bg { background-color: oklch(0.96 0 0); color: oklch(0.08 0 0); }
+.score-bogey-bg { background-color: oklch(0.88 0 0); color: oklch(0.45 0 0); }
+.score-double-bg { background-color: oklch(0.82 0 0); color: oklch(0.45 0 0); }
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: oklch(0.65 0 0);
+  transition: all 0.15s ease;
+  border-left: 3px solid transparent;
+  text-decoration: none;
+}
+
+.sidebar-nav-item:hover {
+  color: oklch(0.95 0 0);
+  background-color: oklch(0.14 0 0);
+}
+
+.sidebar-nav-item.active {
+  color: oklch(1 0 0);
+  background-color: oklch(0.14 0 0);
+  border-left-color: oklch(0.55 0.22 27.33);
+}
+
+.swiss-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.swiss-table th {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: oklch(0.45 0 0);
+  border-bottom: 2px solid oklch(0.08 0 0);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.swiss-table td {
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid oklch(0.92 0 0);
+}
+
+.swiss-table tr:hover td {
+  background-color: oklch(0.98 0 0);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
 }
