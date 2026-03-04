@@ -109,14 +109,12 @@ export default function GolfLayout({ children }: GolfLayoutProps) {
         <nav className="flex-1 py-4">
           <p className="px-4 mb-2 text-[0.55rem] font-bold tracking-[0.2em] text-gray-600 uppercase">Navigation</p>
           {navItems.map(item => (
-            <Link key={item.path} href={item.path}>
-              <a className={`sidebar-nav-item ${isActive(item.path) ? 'active' : ''}`}>
-                <item.icon size={14} strokeWidth={2} />
-                <div>
-                  <div className="text-[0.7rem] font-bold tracking-[0.08em]">{item.labelEn}</div>
-                  <div className="text-[0.65rem] opacity-60">{item.label}</div>
-                </div>
-              </a>
+            <Link key={item.path} href={item.path} className={`sidebar-nav-item ${isActive(item.path) ? 'active' : ''}`}>
+              <item.icon size={14} strokeWidth={2} />
+              <div>
+                <div className="text-[0.7rem] font-bold tracking-[0.08em]">{item.labelEn}</div>
+                <div className="text-[0.65rem] opacity-60">{item.label}</div>
+              </div>
             </Link>
           ))}
         </nav>
@@ -161,14 +159,14 @@ export default function GolfLayout({ children }: GolfLayoutProps) {
           <aside className="w-56 h-full bg-[oklch(0.06_0_0)]" onClick={e => e.stopPropagation()}>
             <div className="pt-16 pb-4">
               {navItems.map(item => (
-                <Link key={item.path} href={item.path}>
-                  <a
-                    className={`sidebar-nav-item ${isActive(item.path) ? 'active' : ''}`}
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    <item.icon size={14} />
-                    <span className="text-[0.75rem] font-bold tracking-[0.08em]">{item.labelEn}</span>
-                  </a>
+                <Link
+                  key={item.path}
+                  href={item.path}
+                  className={`sidebar-nav-item ${isActive(item.path) ? 'active' : ''}`}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  <item.icon size={14} />
+                  <span className="text-[0.75rem] font-bold tracking-[0.08em]">{item.labelEn}</span>
                 </Link>
               ))}
             </div>
