@@ -4,83 +4,53 @@
   "installCommand": "pnpm install --frozen-lockfile",
   "framework": "vite",
   "outputDirectory": "dist",
-  "env": [
-    {
-      "key": "DATABASE_URL",
-      "description": "MySQL/TiDB database connection string",
-      "type": "secret"
+  "env": {
+    "DATABASE_URL": {
+      "description": "MySQL/TiDB database connection string"
     },
-    {
-      "key": "JWT_SECRET",
-      "description": "Session cookie signing secret",
-      "type": "secret"
+    "JWT_SECRET": {
+      "description": "Session cookie signing secret"
     },
-    {
-      "key": "VITE_APP_ID",
-      "description": "Manus OAuth application ID",
-      "type": "secret"
+    "VITE_APP_ID": {
+      "description": "Manus OAuth application ID"
     },
-    {
-      "key": "OAUTH_SERVER_URL",
-      "description": "Manus OAuth backend base URL",
-      "type": "secret"
+    "OAUTH_SERVER_URL": {
+      "description": "Manus OAuth backend base URL"
     },
-    {
-      "key": "VITE_OAUTH_PORTAL_URL",
-      "description": "Manus login portal URL",
-      "type": "secret"
+    "VITE_OAUTH_PORTAL_URL": {
+      "description": "Manus login portal URL"
     },
-    {
-      "key": "OWNER_OPEN_ID",
-      "description": "Owner's OpenID from Manus",
-      "type": "secret"
+    "OWNER_OPEN_ID": {
+      "description": "Owner's OpenID from Manus"
     },
-    {
-      "key": "OWNER_NAME",
-      "description": "Owner's name",
-      "type": "secret"
+    "OWNER_NAME": {
+      "description": "Owner's name"
     },
-    {
-      "key": "BUILT_IN_FORGE_API_URL",
-      "description": "Manus built-in APIs URL",
-      "type": "secret"
+    "BUILT_IN_FORGE_API_URL": {
+      "description": "Manus built-in APIs URL"
     },
-    {
-      "key": "BUILT_IN_FORGE_API_KEY",
-      "description": "Bearer token for Manus built-in APIs (server-side)",
-      "type": "secret"
+    "BUILT_IN_FORGE_API_KEY": {
+      "description": "Bearer token for Manus built-in APIs (server-side)"
     },
-    {
-      "key": "VITE_FRONTEND_FORGE_API_KEY",
-      "description": "Bearer token for frontend access to Manus APIs",
-      "type": "secret"
+    "VITE_FRONTEND_FORGE_API_KEY": {
+      "description": "Bearer token for frontend access to Manus APIs"
     },
-    {
-      "key": "VITE_FRONTEND_FORGE_API_URL",
-      "description": "Manus built-in APIs URL for frontend",
-      "type": "secret"
+    "VITE_FRONTEND_FORGE_API_URL": {
+      "description": "Manus built-in APIs URL for frontend"
     },
-    {
-      "key": "VITE_ANALYTICS_ENDPOINT",
-      "description": "Analytics endpoint URL",
-      "type": "secret"
+    "VITE_ANALYTICS_ENDPOINT": {
+      "description": "Analytics endpoint URL"
     },
-    {
-      "key": "VITE_ANALYTICS_WEBSITE_ID",
-      "description": "Analytics website ID",
-      "type": "secret"
+    "VITE_ANALYTICS_WEBSITE_ID": {
+      "description": "Analytics website ID"
     },
-    {
-      "key": "VITE_APP_TITLE",
-      "description": "Application title",
-      "type": "secret"
+    "VITE_APP_TITLE": {
+      "description": "Application title"
     },
-    {
-      "key": "VITE_APP_LOGO",
-      "description": "Application logo URL",
-      "type": "secret"
+    "VITE_APP_LOGO": {
+      "description": "Application logo URL"
     }
-  ],
+  },
   "regions": ["sin1"],
   "functions": {
     "server/_core/index.ts": {
