@@ -1,0 +1,92 @@
+{
+  "buildCommand": "pnpm build",
+  "devCommand": "pnpm dev",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "framework": "vite",
+  "outputDirectory": "dist",
+  "env": [
+    {
+      "key": "DATABASE_URL",
+      "description": "MySQL/TiDB database connection string",
+      "type": "secret"
+    },
+    {
+      "key": "JWT_SECRET",
+      "description": "Session cookie signing secret",
+      "type": "secret"
+    },
+    {
+      "key": "VITE_APP_ID",
+      "description": "Manus OAuth application ID",
+      "type": "secret"
+    },
+    {
+      "key": "OAUTH_SERVER_URL",
+      "description": "Manus OAuth backend base URL",
+      "type": "secret"
+    },
+    {
+      "key": "VITE_OAUTH_PORTAL_URL",
+      "description": "Manus login portal URL",
+      "type": "secret"
+    },
+    {
+      "key": "OWNER_OPEN_ID",
+      "description": "Owner's OpenID from Manus",
+      "type": "secret"
+    },
+    {
+      "key": "OWNER_NAME",
+      "description": "Owner's name",
+      "type": "secret"
+    },
+    {
+      "key": "BUILT_IN_FORGE_API_URL",
+      "description": "Manus built-in APIs URL",
+      "type": "secret"
+    },
+    {
+      "key": "BUILT_IN_FORGE_API_KEY",
+      "description": "Bearer token for Manus built-in APIs (server-side)",
+      "type": "secret"
+    },
+    {
+      "key": "VITE_FRONTEND_FORGE_API_KEY",
+      "description": "Bearer token for frontend access to Manus APIs",
+      "type": "secret"
+    },
+    {
+      "key": "VITE_FRONTEND_FORGE_API_URL",
+      "description": "Manus built-in APIs URL for frontend",
+      "type": "secret"
+    },
+    {
+      "key": "VITE_ANALYTICS_ENDPOINT",
+      "description": "Analytics endpoint URL",
+      "type": "secret"
+    },
+    {
+      "key": "VITE_ANALYTICS_WEBSITE_ID",
+      "description": "Analytics website ID",
+      "type": "secret"
+    },
+    {
+      "key": "VITE_APP_TITLE",
+      "description": "Application title",
+      "type": "secret"
+    },
+    {
+      "key": "VITE_APP_LOGO",
+      "description": "Application logo URL",
+      "type": "secret"
+    }
+  ],
+  "regions": ["sin1"],
+  "functions": {
+    "server/_core/index.ts": {
+      "runtime": "nodejs18.x",
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  }
+}

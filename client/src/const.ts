@@ -12,6 +12,8 @@ export const getLoginUrl = () => {
   url.searchParams.set("redirectUri", redirectUri);
   url.searchParams.set("state", state);
   url.searchParams.set("type", "signIn");
+  // 添加 User-Agent 标头以支持手机登入，规避 Google 限制
+  url.searchParams.set("userAgent", "desktop");
 
   return url.toString();
 };

@@ -45,7 +45,7 @@ export default function GolfLayout({ children }: GolfLayoutProps) {
               <div className="w-8 h-8 bg-black flex items-center justify-center">
                 <div className="w-3 h-3 bg-red-500" />
               </div>
-              <span className="text-xs font-bold tracking-[0.2em] uppercase">Golf Tracker</span>
+              <span className="text-xs font-bold tracking-[0.2em] uppercase">47's Golf Tracker</span>
             </div>
             <div className="border-t-2 border-black pt-4">
               <h1 className="text-4xl font-black tracking-tight leading-none">GOLF</h1>
@@ -95,7 +95,7 @@ export default function GolfLayout({ children }: GolfLayoutProps) {
             <div className="w-5 h-5 bg-[oklch(0.55_0.22_27.33)] flex items-center justify-center flex-shrink-0">
               <div className="w-2 h-2 bg-white" />
             </div>
-            <span className="text-[0.6rem] font-bold tracking-[0.2em] text-gray-400 uppercase">Golf Tracker</span>
+            <span className="text-[0.6rem] font-bold tracking-[0.2em] text-gray-400 uppercase">47's Golf Tracker</span>
           </div>
           <div className="mt-2">
             <div className="text-xl font-black text-white tracking-tight leading-none">GOLF</div>
@@ -146,7 +146,7 @@ export default function GolfLayout({ children }: GolfLayoutProps) {
           <div className="w-5 h-5 bg-[oklch(0.55_0.22_27.33)] flex items-center justify-center">
             <div className="w-2 h-2 bg-white" />
           </div>
-          <span className="text-white text-sm font-black tracking-tight">GOLF TRACKER</span>
+          <span className="text-white text-sm font-black tracking-tight">47'S GOLF TRACKER</span>
         </div>
         <button onClick={() => setMobileOpen(!mobileOpen)} className="text-white p-1">
           {mobileOpen ? <X size={20} /> : <Menu size={20} />}
