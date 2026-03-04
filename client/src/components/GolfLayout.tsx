@@ -48,6 +48,7 @@ export default function GolfLayout({ children }: GolfLayoutProps) {
               <span className="text-xs font-bold tracking-[0.2em] uppercase">47's Golf Tracker</span>
             </div>
             <div className="border-t-2 border-black pt-4">
+              <h1 className="text-4xl font-black tracking-tight leading-none">47'S</h1>
               <h1 className="text-4xl font-black tracking-tight leading-none">GOLF</h1>
               <h1 className="text-4xl font-black tracking-tight leading-none text-[oklch(0.55_0.22_27.33)]">TRACKER</h1>
             </div>
@@ -98,6 +99,7 @@ export default function GolfLayout({ children }: GolfLayoutProps) {
             <span className="text-[0.6rem] font-bold tracking-[0.2em] text-gray-400 uppercase">47's Golf Tracker</span>
           </div>
           <div className="mt-2">
+            <div className="text-xl font-black text-white tracking-tight leading-none">47'S</div>
             <div className="text-xl font-black text-white tracking-tight leading-none">GOLF</div>
             <div className="text-xl font-black text-[oklch(0.55_0.22_27.33)] tracking-tight leading-none">TRACKER</div>
           </div>
